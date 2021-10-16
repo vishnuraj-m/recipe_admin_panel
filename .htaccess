@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:foodrecipeslaravelpanel.royhayek.com
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?foodrecipeslaravelpanel.royhayek.com
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:foodrecipeslaravelpanel.royhayek.com
